@@ -1,6 +1,6 @@
 #!/bin/bash
 
-langset=ru 
+langset=ru
 
 
 language_en=( "English" "Quit" "Main menu" "Git: add ALL files/commit" "Git init" "Change language" "Language selection" )
@@ -40,7 +40,7 @@ languages() {
 							echo "${msg[7]} ${!df}. ${msg[8]}"
 							languages
 							echo "${msg[7]} ${lng[0]}. ${msg[8]}"
-							sed  -i -r "/^langset=/s/langset=[\"\']?.*[\"\']?/langset=$langset/" "${0}"
+							sed -i -r "/^langset=/s/langset=[\"\']?.*[\"\']?/langset=$langset/" "${0}"
 							exit ;;
 							
 			$((${#lng_sfx[@]}+1)) )		echo "[ $l_item ]->: ${lng[1]}" ; exit ;;
@@ -81,8 +81,8 @@ main() {
 		
 		echo ----------
 		
-		read -s -n1 -p "${msg[1]}: " item	
-		echo "[ $item ]->: ${menu0[$item]}" 
+		read -s -n1 -p "${msg[1]}: " item
+		echo "[ $item ]->: ${menu0[$item]}"
 
 		case $item in
 			1 ) 	git add .
