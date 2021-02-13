@@ -1,3 +1,0 @@
-langset=ru          ; q fghtrsd
-
-langset=ghghb
